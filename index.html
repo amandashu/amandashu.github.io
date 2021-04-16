@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Amanda Shu</title>
-    <link rel="shortcut icon"  href="images/favicon.ico"/>
+    <link rel="shortcut icon" href="images/favicon.ico" />
 
     <!-- css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -18,21 +19,23 @@
 </head>
 
 <body>
-    <div class="jumbotron" id="home" >
+    <div class="jumbotron" id="home">
         <!-- navigation bar -->
         <nav class="fixed-top navbar navbar-expand-lg navbar-light navbar-fixed-top" id="my-navbar">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse">
-                    <div class="navbar-nav">
-                        <a class='nav-link' style="border: solid; border-color: white;" href=#home> AMANDA SHU</a>
-                    </div>
-                    <div style="flex: 1;"></div>
-                    <div class="navbar-nav">
-                        <a class='nav-link' href=#home> HOME</a>
-                        <a class='nav-link' href=#about> ABOUT</a>
-                        <a class='nav-link' href=#projects> PROJECTS</a>
-                        <a class='nav-link' href=#contact> CONTACT</a>
-                    </div>
+            <div class="navbar-brand">
+                <a class='nav-link' style="color: white; border: solid; border-color: white;" href=#home> AMANDA SHU</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div style="flex: 1;"></div>
+                <div class="navbar-nav">
+                    <a class='nav-link' href=#home> HOME</a>
+                    <a class='nav-link' href=#about> ABOUT</a>
+                    <a class='nav-link' href=#projects> PROJECTS</a>
+                    <a class='nav-link' href=#contact> CONTACT</a>
                 </div>
             </div>
         </nav>
@@ -45,7 +48,8 @@
                 <p class="lead">Hello! Glad to see you here. <br>This is a collection of my data science projects.</p>
                 </p>
                 <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#projects" role="button" style="border-color:#5895C8; background-color:#5895C8; color: white">VIEW PROJECTS</a>
+                    <a class="btn btn-primary btn-lg" href="#projects" role="button"
+                        style="border-color:#5895C8; background-color:#5895C8; color: white">VIEW PROJECTS</a>
                 </p>
 
             </div>
@@ -60,41 +64,47 @@
                     <img id="portrait" src="images/portrait.jpg" class="mx-auto d-block"> </img>
                 </div>
                 <div class="col-md-7 py-5 px-4">
-                    <p id="p1">
+                    <p id="p1" class="pl-3 about-p">
                         I am currently a student at UC San Diego. I started as an economics major and picked up
-                        the data science major after getting exposed to data analytics in one of my courses, 
+                        the data science major after getting exposed to data analytics in one of my courses,
                         as well as
-                        getting encouragement from my twin 
-                        <a target="_blank" style="color:inherit; text-decoration:underline;" href="https://jessicashu7.github.io/"> sister</a> 
+                        getting encouragement from my twin
+                        <a target="_blank" style="color:inherit; text-decoration:underline;"
+                            href="https://jessicashu7.github.io/"> sister</a>
                         to learn how to code.
                     </p>
-                    <p id="p2">
-                        I am interested in all things data, including data science, data engineering, 
+                    <p id="p2" class="pl-3 about-p">
+                        I am interested in all things data, including data science, data engineering,
                         business intelligence, and computational social science.
                     </p>
-                    <p>In my free time, I enjoy hiking, watching movies/shows, cooking, and baking.</p>
+                    <p id="p3" class="pl-3 about-p">
+                        In my free time, I enjoy hiking, watching movies/shows, cooking, and baking.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- projects -->
-    <div class="container-fluid py-5 px-5" style="background-color: #EFEFEF;" >
+    <div class="container-fluid py-5 px-5" style="background-color: #EFEFEF;">
         <div id="projects" class="container">
-            <!-- will be populared with projects -->    
+            <!-- will be populared with projects -->
         </div>
     </div>
 
     <!-- contact -->
-    <div class="container-fluid py-5" id="contact"  data-anijs="if: scroll, on: window, do: bounce animated, to: .icon-link">
+    <div class="container-fluid py-5" id="contact">
         <div class="container">
             <div class="row align-items-center my-5 py-3">
                 <div class="col-md-12 py-5 px-4 d-flex align-items-center flex-column">
-                    <p class="h1" style="color:#1b3c57;">Contact Me</p>
-                    <div class="d-flex justify-content-center" >
-                        <a href="https://www.linkedin.com/in/amandashu/" target="_blank"><i class="fa fa-linkedin icon-link" style="font-size: 30px;"></i></a>
-                        <a href="https://github.com/amandashu" target="_blank"><i class="fa fa-github icon-link" style="font-size: 30px;"></i></a>
-                        <a href = "mailto: shu.amanda25@gmail.com" target="_blank"><i class="fa fa-envelope-o icon-link" style="font-size: 30px;"></i></a>
+                    <p class="h1">Contact Me</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://www.linkedin.com/in/amandashu/" target="_blank"><i
+                                class="fa fa-linkedin icon-link" style="font-size: 30px;"></i></a>
+                        <a href="https://github.com/amandashu" target="_blank"><i class="fa fa-github icon-link"
+                                style="font-size: 30px;"></i></a>
+                        <a href="mailto: shu.amanda25@gmail.com" target="_blank"><i class="fa fa-envelope-o icon-link"
+                                style="font-size: 30px;"></i></a>
                     </div>
                 </div>
             </div>
@@ -102,24 +112,31 @@
     </div>
 
     <!-- footer -->
-    <footer style="background-color: #5895C8;">
-        <div class="container">
+    <footer style="background-color: red; height:500px">
+        <div class="container-fluid" id="footer" style="background-color: #5895C8; height:500px">
             <div class="row ">
                 <div class="col-md-12 text-center my-2">
-                    <span style="color:white;"> <a style="text-decoration: underline; color:inherit;"
-                         target="_blank" href="https://github.com/amandashu/amandashu.github.io">Website Github Repository</a> (last updated April 2021)</span>
+                    <span style="color:white;"> <a style="text-decoration: underline; color:inherit;" target="_blank"
+                            href="https://github.com/amandashu/amandashu.github.io">Website Github Repository</a> (last
+                        updated April 2021)</span>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script src="./js/main.js"></script>
 
-    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
-    <script src="helpers/scrollreveal/anijs-helper-scrollreveal-min.js"></script>
 </body>
 
 </html>
