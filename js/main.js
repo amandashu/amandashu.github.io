@@ -61,58 +61,6 @@ function addProject(project, projectId, rowId) {
             // array of all cards
             let allCards = document.querySelectorAll('*[id^="card-"]');
 
-            // if content id matches clicked id and the content is opened
-            // if (contentRow.hasClass("show") && clickId == contentProjId) {
-            //     contentRow.collapse('hide');
-            //     newDivCard.style.borderBottomColor = "white";
-            //     divContent.style.borderTopColor = "white";
-            // }
-            // else {
-            //     let initialState = contentRow.hasClass("show")
-            //     console.log(initialState)
-
-            //     // delete children of content, replace with new content, and give content a new id
-            //     let newID = "contentRow-" + rowId + "-" + projectId;
-            //     divContent.id = newID;
-            //     while (divContent.firstChild) {
-            //         divContent.removeChild(divContent.firstChild);
-            //     }
-            //     addProjectContent(project, divContent, projectId);
-
-            //     // open content with gold bottom/top borders
-            //     $("#" + newID).collapse('show');
-
-            //     newDivCard.style.borderBottomColor = gold;
-            //     divContent.style.borderTopColor = gold;
-
-            //     // make all other cards white border if click on different card within the same row
-            //     for (var i = 0; i < allCards.length; i++) {
-            //         if (Math.floor(i / 3) == rowId) {
-            //             if (i != clickId) {
-            //                 document.getElementById("card-" + i).style.borderBottomColor = "white";
-            //             }
-            //         }
-            //     }
-
-            //     // change height on content row based on content
-            //     // if (initialState) {
-            //     //     const b = anime({
-            //     //         targets: '#' + newID,
-            //     //         height: contentStartHeight + $('#content-' + projectId).outerHeight() + "px",
-            //     //         duration: 500,
-            //     //         easing: 'easeInExpo'
-            //     //     })
-            //     // }
-
-            //     const b = anime({
-            //         targets: '#' + newID,
-            //         height: contentStartHeight + $('#content-' + projectId).outerHeight() + "px",
-            //         duration: 500,
-            //         easing: 'easeInExpo'
-            //     })
-            // }
-
-
             if (clickId == contentProjId) {
                 console.log(divContent.height)
                 anime({
@@ -206,16 +154,6 @@ function addRows(i) {
     newDivProject.id = "projectRow-" + i;
 
     // row for content
-    // const newDivContent = document.createElement("div")
-    // newDivContent.classList.add('py-3', 'px-5', 'mx-5', 'collapse', 'contentRow');
-    // newDivContent.style.backgroundColor = "white"
-    // newDivContent.id = "contentRow-" + i;
-    // newDivContent.style.border = "solid";
-    // newDivContent.style.borderWidth = "5px";
-    // newDivContent.style.borderColor = "white";
-    // newDivContent.style.borderTopColor = gold;
-
-
     const newDivContent = document.createElement("div")
     newDivContent.classList.add('mx-5', 'contentRow', 'd-flex', 'justify-content-center', 'align-items-center');
     newDivContent.style.backgroundColor = "white"
@@ -277,16 +215,7 @@ function addProjectContent(project, divContent, projId) {
         button.target = "_blank";
         innerDivContent.appendChild(button)
     }
-
-    // const b = anime({
-    //     targets: divContent.id,
-    //     height: contentStartHeight + $('#content-' + projId).outerHeight() + "px",
-    //     duration: 500,
-    //     easing: 'easeInExpo'
-    // })
-
     divContent.appendChild(innerDivContent)
-
 
     //fade in the text
     const a = anime({
@@ -355,7 +284,6 @@ $(document).click(function (e) {
             duration: 500,
             easing: 'easeInExpo'
         })
-
 
         $('*[id^="card-"]').css("borderBottomColor", "white");
         $('*[id^="contentRow-"]').css("borderTopColor", "white");
