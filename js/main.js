@@ -131,20 +131,20 @@ function addProject(project, projectId, rowId) {
     currentDiv.appendChild(newOuterDiv);
 
     // card animation
-    var cardAnimation = anime({
-        targets: '#card-' + projectId,
-        translateY: '-50%',
-        opacity: 1
-    });
+    // var cardAnimation = anime({
+    //     targets: '#card-' + projectId,
+    //     translateY: '-50%',
+    //     opacity: 1
+    // });
 
-    new ScrollMagic.Scene({
-        triggerElement: '#card-' + projectId,
-        triggerHook: 0.5
-    })
-        .on("enter", function (event) {
-            cardAnimation.play();
-        })
-        .addTo(controller);
+    // new ScrollMagic.Scene({
+    //     triggerElement: '#card-' + projectId,
+    //     triggerHook: 0.5
+    // })
+    //     .on("enter", function (event) {
+    //         cardAnimation.play();
+    //     })
+    //     .addTo(controller);
 }
 
 function addRows(i) {
@@ -299,7 +299,7 @@ $(document).click(function (e) {
 
 
 // about timeline animation
-var tl = anime.timeline({
+var aboutAnime = anime.timeline({
     easing: 'easeOutExpo',
     duration: 750,
     autoplay: false
@@ -326,7 +326,7 @@ new ScrollMagic.Scene({
     triggerHook: 1
 })
     .on("enter", function (event) {
-        tl.play();
+        aboutAnime.play();
     })
     .addTo(controller);
 
@@ -334,31 +334,13 @@ new ScrollMagic.Scene({
 // project cards
 
 
-// contact me
-const a = anime({
-    targets: '.icon-link',
-    translateY: -20,
-    duration: 300,
-    delay: 500,
-    easing: 'easeInOutExpo',
-    direction: 'alternate',
-    autoplay: false
-});
-
-new ScrollMagic.Scene({
-    triggerElement: '#contact',
-    triggerHook: 1
-})
-    .on("enter", function (event) {
-        a.play();
-    })
-    .addTo(controller);
-
 // footer
-const c = anime({
+const footerAnime = anime({
     targets: '#footer',
-    height: '100%',
-    easing: 'easeInOutQuad'
+    scaleY: 1,
+    easing: 'easeOutExpo',
+    duration: 700,
+    autoplay: false,
 });
 
 new ScrollMagic.Scene({
@@ -366,7 +348,6 @@ new ScrollMagic.Scene({
     triggerHook: 1
 })
     .on("enter", function (event) {
-        c.play();
-        // console.log("hi")
+        footerAnime.play();
     })
     .addTo(controller);
