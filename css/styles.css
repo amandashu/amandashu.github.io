@@ -61,3 +61,7 @@ html {
     margin-right: 5px;
     margin-left: 5px;
 }
+
+.icon-link:hover {
+    transform: scale(1.3);
+}

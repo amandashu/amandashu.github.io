@@ -1,6 +1,5 @@
 var blue = "#5895C8";
 var gold = "#daa520";
-var contentStartHeight = 0;
 var controller = new ScrollMagic.Controller();
 
 
@@ -15,7 +14,6 @@ function addProject(project, projectId, rowId) {
     newDivCard.style.boxShadow = "5px 8px 15px #D0D1D1";
     newDivCard.style.height = "275px";
     newDivCard.style.width = "95%";
-    newDivCard.id = "card-" + projectId;
     newDivCard.style.backgroundColor = "white";
     newDivCard.style.borderRadius = "5px";
     newDivCard.style.border = "solid";
@@ -23,19 +21,17 @@ function addProject(project, projectId, rowId) {
     newDivCard.style.borderColor = "white";
     newDivCard.style.borderTopColor = blue;
     newDivCard.style.transition = "transform .2s";
-    newDivCard.style.transform = "translate(0px, 50%)";
-    // newDivCard.style.opacity = 0;
-
+    newDivCard.id = "card-" + projectId;
 
     // event listeners to hover over cards
     newDivCard.addEventListener("mouseenter",
         function () {
-            newDivCard.style.transform = "scale(1.1)"
+            newDivCard.style.transform = "scale(1.1)";
         }
     );
     newDivCard.addEventListener("mouseleave",
         function () {
-            newDivCard.style.transform = "scale(1)"
+            newDivCard.style.transform = "scale(1)";
         }
     );
 
@@ -43,11 +39,10 @@ function addProject(project, projectId, rowId) {
     newDivCard.addEventListener("click",
         function () {
             // same content element but using jquery vs javascript
-            let contentRow = $('*[id^="contentRow-' + rowId + '"]').first();
             let divContent = document.querySelectorAll('*[id^="contentRow-' + rowId + '"]')[0];
 
             // get id from content, -1 if not set yet
-            let contentProjId = contentRow.attr("id");
+            let contentProjId = divContent.id;
             if (contentProjId.split('-').length - 1 >= 2) {
                 contentProjId = contentProjId.substring(contentProjId.lastIndexOf("-") + 1, contentProjId.length);
             } else {
@@ -62,38 +57,46 @@ function addProject(project, projectId, rowId) {
             let allCards = document.querySelectorAll('*[id^="card-"]');
 
             if (clickId == contentProjId) {
-                console.log(divContent.height)
+                // animate height to close
                 anime({
-                    targets: '#' + contentRow.attr("id"),
+                    targets: '#' + divContent.id,
                     height: "0px",
+                    // borderWidth: '0px',
                     duration: 500,
                     easing: 'easeInExpo'
                 })
-                newDivCard.style.borderBottomColor = "white";
-                divContent.style.borderTopColor = "white";
 
+                newDivCard.style.borderBottomColor = "white";
+                divContent.style.borderWidth = "0px";
+
+                // reset id to row only
                 let newID = "contentRow-" + rowId;
                 divContent.id = newID;
             }
             else {
-                // delete children of content, replace with new content, and give content a new id
+                // reset id to row + project
                 let newID = "contentRow-" + rowId + "-" + projectId;
                 divContent.id = newID;
+
+                // empty content row and repopulate with project info
                 while (divContent.firstChild) {
                     divContent.removeChild(divContent.firstChild);
                 }
                 addProjectContent(project, divContent, projectId);
 
                 // open content with gold bottom/top borders
+                newDivCard.style.borderBottomColor = gold;
+
+                divContent.style.borderWidth = "5px";
+                // divContent.style.borderTopColor = gold;
+
+                // animate height to open
                 anime({
                     targets: '#' + newID,
                     height: 1.4 * $('#content-' + projectId).outerHeight() + "px",
                     duration: 500,
                     easing: 'easeInExpo'
                 })
-
-                newDivCard.style.borderBottomColor = gold;
-                divContent.style.borderTopColor = gold;
 
                 // make all other cards white border if click on different card within the same row
                 for (var i = 0; i < allCards.length; i++) {
@@ -129,22 +132,6 @@ function addProject(project, projectId, rowId) {
     // add project to specified row
     const currentDiv = document.getElementById("projectRow-" + rowId);
     currentDiv.appendChild(newOuterDiv);
-
-    // card animation
-    // var cardAnimation = anime({
-    //     targets: '#card-' + projectId,
-    //     translateY: '-50%',
-    //     opacity: 1
-    // });
-
-    // new ScrollMagic.Scene({
-    //     triggerElement: '#card-' + projectId,
-    //     triggerHook: 0.5
-    // })
-    //     .on("enter", function (event) {
-    //         cardAnimation.play();
-    //     })
-    //     .addTo(controller);
 }
 
 function addRows(i) {
@@ -160,6 +147,10 @@ function addRows(i) {
     newDivContent.id = "contentRow-" + i;
     newDivContent.style.overflow = 'hidden';
     newDivContent.style.height = '0px';
+    newDivContent.style.border = 'solid';
+    newDivContent.style.borderColor = 'white';
+    newDivContent.style.borderWidth = '0px'
+    newDivContent.style.borderTopColor = gold;
 
     // add new rows to projects div
     const currentDiv = document.getElementById("projects");
@@ -217,8 +208,8 @@ function addProjectContent(project, divContent, projId) {
     }
     divContent.appendChild(innerDivContent)
 
-    //fade in the text
-    const a = anime({
+    // animation to fade in the text
+    anime({
         targets: '.content',
         duration: 500,
         opacity: 1,
@@ -246,7 +237,6 @@ project.then(
             if (i % 3 == 0) {
                 addRows(f)
             }
-            contentStartHeight = $("#contentRow-0").outerHeight() // intial hieght of content rows
             key = projKeys[i]
             addProject(p[key], i, f)
         }
@@ -278,6 +268,7 @@ window.addEventListener("scroll", function () {
 $(document).click(function (e) {
     if (!$(e.target.parentNode).is('.contentRow') && !$(e.target).is('.contentRow') &&
         !$(e.target.parentNode).is('.project') && !$(e.target).is('.project')) {
+        // animate to close
         anime({
             targets: '.contentRow',
             height: "0px",
@@ -286,13 +277,15 @@ $(document).click(function (e) {
         })
 
         $('*[id^="card-"]').css("borderBottomColor", "white");
-        $('*[id^="contentRow-"]').css("borderTopColor", "white");
+
+        // reset the ids of content rows
         $('*[id^="contentRow-"]').each(function () {
             let currentId = $(this).attr('id')
             if (currentId.split('-').length - 1 >= 2) {
                 currentId = currentId.substring(0, currentId.lastIndexOf("-"));
             }
             $(this).attr('id', currentId)
+            $(this).css('borderWidth', "0px");
         })
     }
 });
@@ -320,7 +313,6 @@ var aboutAnime = anime.timeline({
         opacity: 1
     });
 
-
 new ScrollMagic.Scene({
     triggerElement: '#about',
     triggerHook: 1
@@ -330,11 +322,7 @@ new ScrollMagic.Scene({
     })
     .addTo(controller);
 
-
-// project cards
-
-
-// footer
+// footer animation
 const footerAnime = anime({
     targets: '#footer',
     scaleY: 1,
