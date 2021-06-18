@@ -1,6 +1,5 @@
 {
-    "asnapp":
-        {
+    "asnapp": {
         "Title": "Workout Video Recommendation System",
         "Description": "For my senior capstone project, my group and I built a flask web application where users can create an account, login, choose between different recommendation options, and browse through personalized recommendations of workout videos.",
         "Image": "images/asnapp.PNG",
@@ -10,57 +9,52 @@
             "Demo": "https://www.youtube.com/watch?v=QJFg0HguGuI",
             "Report": "https://docs.google.com/viewer?url=https://github.com/amandashu/Workout_Recommender/raw/main/materials/Report.pdf",
             "Github": "https://github.com/amandashu/Workout_Recommender"
-            }
-        },
-    "cupcake-muffin":
-        {
-            "Title": "Cupcake/Muffin Classification",
-            "Description": "I webscraped cupcake and muffin recipes, analyzed their ingredient distributions, and ran various classification models to predict whether a recipe is a cupcake or muffin.",
-            "Image": "images/cupcake.jpeg",
-            "Skills/Tools": "Python (sckit-learn, pytorch, pandas, selenium, beautifulsoup)",
-            "Categories": "Machine Learning, Data Analysis, Webscraping",
-            "Links": {
-                "Project": "https://nbviewer.jupyter.org/github/amandashu/Cupcake-Muffin-Classification/blob/main/reports/analysis.ipynb",
-                "Github": "https://github.com/amandashu/Cupcake-Muffin-Classification"
-            }
-        },
-    "gbbo":
-        {
-            "Title": "Great British Bake Off Data Visualization",
-            "Description": "I created a website to learn about the British television show, The Great British Bake Off, through a few data visualizations.",
-            "Image": "images/gbbo.PNG",
-            "Skills/Tools": "Javascript (highcharts, d3), HTML, CSS, Python",
-            "Categories": "Data Visualization, Front-End Web Development",
-            "Links": {
-                "Project": "https://amandashu.github.io/Great-British-Bake-Off-Data-Viz/",
-                "Github": "https://github.com/amandashu/Great-British-Bake-Off-Data-Viz"
-                }
-        },
-    "hp":
-        {
-            "Title": "PostgreSQL Tutorial",
-            "Description": "As I am a Harry Potter fun, I wrote a PostgreSQL tutorial covering basic statements, joins, and subqueries on a Harry Potter themed database",
-            "Image": "images/hp.jpg",
-            "Skills/Tools": "PostgreSQL",
-            "Categories": "Databases",
-            "Links": {
-                "Github": "https://github.com/amandashu/PostgreSQL-Tutorial"
-                }
-        },
-    "lightfm":
-        {
-            "Title": "Evaluation of LightFM's Recommendation Models",
-            "Description": "As part of my senior capstone sequence, my partner and I wrote an article on comparing LightFM's pure and hybrid collaborative filtering models with several well-tuned baselines in order to see if the model performance issues seen in research are also present with popular Python packages.",
-            "Image": "images/lightfm.jfif",
-            "Skills/Tools": "Python (lightfm, pandas)",
-            "Categories": "Recommendation Systems",
-            "Links": {
-                "Medium Article": "https://amanda-shu.medium.com/lightfm-performance-7515e57f5cfe",
-                "Github": "https://github.com/amandashu/LightFM-Performance"
-                }
-        },
-    "cape":
-    {
+        }
+    },
+    "cupcake-muffin": {
+        "Title": "Cupcake/Muffin Classification",
+        "Description": "I webscraped cupcake and muffin recipes, analyzed their ingredient distributions, and ran various classification models to predict whether a recipe is a cupcake or muffin.",
+        "Image": "images/cupcake.jpeg",
+        "Skills/Tools": "Python (scikit-learn, pytorch, pandas, selenium, beautifulsoup)",
+        "Categories": "Machine Learning, Data Analysis, Webscraping",
+        "Links": {
+            "Project": "https://nbviewer.jupyter.org/github/amandashu/Cupcake-Muffin-Classification/blob/main/reports/analysis.ipynb",
+            "Github": "https://github.com/amandashu/Cupcake-Muffin-Classification"
+        }
+    },
+    "gbbo": {
+        "Title": "Great British Bake Off Data Visualization",
+        "Description": "I created a website to learn about the British television show, The Great British Bake Off, through a few data visualizations.",
+        "Image": "images/gbbo.PNG",
+        "Skills/Tools": "Javascript (highcharts, d3), HTML, CSS, Python",
+        "Categories": "Data Visualization, Front-End Web Development",
+        "Links": {
+            "Project": "https://amandashu.github.io/Great-British-Bake-Off-Data-Viz/",
+            "Github": "https://github.com/amandashu/Great-British-Bake-Off-Data-Viz"
+        }
+    },
+    "hp": {
+        "Title": "PostgreSQL Tutorial",
+        "Description": "As I am a Harry Potter fan, I wrote a PostgreSQL tutorial covering basic SQL statements, joins, and subqueries on a Harry Potter themed database",
+        "Image": "images/hp.jpg",
+        "Skills/Tools": "PostgreSQL",
+        "Categories": "Databases",
+        "Links": {
+            "Github": "https://github.com/amandashu/PostgreSQL-Tutorial"
+        }
+    },
+    "lightfm": {
+        "Title": "Evaluation of LightFM's Recommendation Models",
+        "Description": "As part of my senior capstone sequence, my partner and I wrote an article on comparing LightFM's pure and hybrid collaborative filtering models with several well-tuned baselines in order to see if the model performance issues seen in research are also present with popular Python packages.",
+        "Image": "images/lightfm.jfif",
+        "Skills/Tools": "Python (lightfm, pandas)",
+        "Categories": "Recommendation Systems",
+        "Links": {
+            "Medium Article": "https://amanda-shu.medium.com/lightfm-performance-7515e57f5cfe",
+            "Github": "https://github.com/amandashu/LightFM-Performance"
+        }
+    },
+    "cape": {
         "Title": "Analysis of Teaching Experience and Student Approval Ratings",
         "Description": "For my econometrics honors course, I wrote a short paper on analyzing the relationship between a professor's teaching experience and their student approval ratings based on Course and Professor Evaluations data.",
         "Image": "images/cape.PNG",
@@ -69,10 +63,9 @@
         "Links": {
             "Paper": "https://docs.google.com/viewer?url=https://github.com/amandashu/ECON-120BH-VSP/raw/master/VSPAmanda5Mar2019.pdf",
             "Github": "https://github.com/amandashu/ECON-120BH-VSP"
-            }
+        }
     },
-    "fordgobike":
-    {
+    "fordgobike": {
         "Title": "EDA on Bike Share Data",
         "Description": "I conducted exploratory data analysis on the demographics, counts, durations, and locations of rides of Ford GoBike's bikeshare data.",
         "Image": "images/fordgobike.PNG",
@@ -80,6 +73,6 @@
         "Categories": "Data Analysis",
         "Links": {
             "Github": "https://github.com/amandashu/EDA-of-Bike-Share-Data"
-            }
+        }
     }
 }
