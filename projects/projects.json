@@ -54,6 +54,17 @@
             "Github": "https://github.com/amandashu/LightFM-Performance"
         }
     },
+    "lightfm": {
+        "Title": "Bank Marketing Classification",
+        "Description": "In my data mining course project, I compared the performance of various classification models on a bank marketing dataset.",
+        "Image": "images/bankmarketing.PNG",
+        "Skills/Tools": "Python (scikit-learn, pandas)",
+        "Categories": "Machine Learning",
+        "Links": {
+            "Paper": "https://docs.google.com/viewer?url=https://github.com/amandashu/Bank-Marketing/raw/master/bankmarketing.pdf",
+            "Github": "https://github.com/amandashu/Bank-Marketing"
+        }
+    },
     "cape": {
         "Title": "Analysis of Teaching Experience and Student Approval Ratings",
         "Description": "For my econometrics honors course, I wrote a short paper on analyzing the relationship between a professor's teaching experience and their student approval ratings based on Course and Professor Evaluations data.",
