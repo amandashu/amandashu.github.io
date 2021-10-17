@@ -54,7 +54,7 @@
             "Github": "https://github.com/amandashu/LightFM-Performance"
         }
     },
-    "lightfm": {
+    "bank-marketing": {
         "Title": "Bank Marketing Classification",
         "Description": "In my data mining course project, I compared the performance of various classification models on a bank marketing dataset.",
         "Image": "images/bankmarketing.PNG",
