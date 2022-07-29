@@ -150,6 +150,16 @@ var aboutAnime = anime.timeline({
         targets: '#p3',
         translateX: -50,
         opacity: 1
+    })
+    .add({
+        targets: '#p4',
+        translateX: -50,
+        opacity: 1
+    })
+    .add({
+        targets: '#p5',
+        translateX: -50,
+        opacity: 1
     });
 
 new ScrollMagic.Scene({
